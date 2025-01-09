@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/smart_style.css">
+    <title>Smart Law Firm - Cabinet Juridique</title>
+  </head>
+  <style>
+    /* == static templates-bases == */
+    *{
+      font-family: 'Bookman Old Style', Georgia, 'Times New Roman', Times, serif;
+    } 
+    body{
+      padding-top: 60px;
+    }
+    nav{
+      background-color: #0211a1;
+      
+    }
+    #nav-color{
+      color: yellow;
+      text-transform: uppercase;
+    }
+    .navbar-nav a{
+      font-size: 15px;
+      color: yellow;
+      font-weight: 250;
+      text-transform: uppercase;
+    }
+    .navbar-brand{
+      color:yellow;
+      font-size: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .navbar-light .navbar-brand:focus,
+    .navbar-light .navbar-brand:hover{
+      color: #fff;
+    }
+    .navbar-light .navbar-nav .navbar-link{
+      color: #0211a1;
+    }
+    .w-100{
+      height: 100vh;
+    }
+    /* == end static templates-bases == */
+
+    /* == static carousel == */
+  
+    .carousel-item{
+      height: 100vh;
+      min-height: 300px;
+    }
+    .carousel-caption{
+      bottom: 75px;
+      z-index: 2;
+    }
+    .carousel-caption h4{
+      font-size: 45px;
+      letter-spacing: 2px;
+      margin-top: 50px;
+      text-align: center;
+    }
+    .carousel-caption h5{
+      color: greenyellow;
+      font: 20px;
+      margin: auto;
+      margin-top: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%;
+    }
+    .carousel-caption a{
+      margin-top: 50px;
+    }
+    .carousel-inner::before{
+      content: "";
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5);
+      width: 100%;
+      z-index: 1;
+    }
+    /* == end static carousel == */
+
+
+    /* == smart title == */
+    .smart-title{
+      background-color: #0211a1;
+    }
+    /* == smart title end == */
+
+
+    /* == card section 1 == */
+    .card{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .card img{
+      height: auto;
+    }
+    .card-header h2{
+      background-color: #0211a1;
+      color: purple;
+    }
+    .card-body p{
+      text-align: justify;
+    }
+    .card-title{
+      background-color: #0211a1;
+      color: yellow;
+      text-align: center;
+    }
+    .card-title2{
+      background-color: #0211a1;
+      color: yellow;
+      text-align: center;
+    }
+    .card-body h6{
+      color: #0211a1;
+      text-align: justify;
+    }
+
+    .card ul li{
+      color: #0211a1;
+    }
+    
+    /* == end card section == */
+    
+
+    /* == icons medias == */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+        }
+
+    .social-icons a {
+      color: #0211a1;
+      font-size: 30px;
+      text-decoration: none;
+        }
+    .social-icons a:hover {
+      color: yellowgreen;
+    }
+    .social-icons-tel{
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+        }
+        .social-icons-wa{
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+        }
+        .social-icons-mail{
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+        }
+    .social-icons-tel a{
+      color: #0211a1;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .social-icons-wa a{
+      color: #0211a1;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .social-icons-mail a{
+      color: #0211a1;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .social-icons-footer{
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+        }
+        .social-icons-footer a{
+      color: #0211a1;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    /* == end icons medias == */
+
+    
+    /* == card section 1 == */
+    .section-header h2{
+      background-color: #0211a1;
+      color: #fff;
+    }
+    .card-header{
+      background-color: #0211a1;
+      text-align: center;
+    }
+    .card h5{
+      color: yellow;
+    }
+    .card-header h4{
+      color:yellow;
+    }
+    .card-header, li{
+      color: #0211a1;
+    }
+    
+
+    /* == end card section 2 == */
+
+    .card-body p{
+      text-align: justify;
+    }
+    footer{
+      background-color: #0211a1;
+      padding: 15px;
+    }
+    footer img{
+      background-color: #fff;
+      margin-top: 15px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+      max-width: 200px;
+      position: relative;
+    }
+    footer h5{
+      text-align: center;
+    }
+    footer h5, h6{
+      text-align: center;
+      color: yellow;
+    }
+    .image-center{
+      text-align: center;
+    }
+    footer h6{
+      text-align: justify;
+    }
+    footer p{
+      text-align: justify;
+    }
+    .container .row .card .service h5{
+      color: #0211a1;
+    }
+    footer .social-icons{
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    footer .social-icons a{
+      color: #fff;
+      font-size: 30px;
+      text-decoration: none;
+    }
+    /* == responsive css == */
+    @media only screen and (min-width:768px) and (max-width: 991px){
+      .carousel-caption{
+        bottom: 200px;
+      }
+      .carousel-caption h4{
+        font-size: 45px;
+        text-align: justify;
+        letter-spacing: 2px;
+        margin-top: 100px;
+        width: auto;
+      }
+      .carousel-caption h5{
+        width: auto;
+      }
+    } 
+
+    @media only screen and (max-width: 767px){
+      .carousel-caption{
+        bottom: 125px;
+      }
+      .carousel-caption h4{
+        font-size: 25px;
+        letter-spacing: 2px;
+        margin-top: 30px;
+        width: auto;
+      }
+      .carousel-caption a{
+        padding: 10px 15px;
+      }
+      .carousel-caption h5{
+        font-size: 12px;
+        line-height: 1.6;
+        width:100%;
+      }
+    }
+    
+  </style>
+  
+<body>
+    
+
+<nav class="navbar navbar-expand-lg  fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">smart law firm</a>
+      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a id="nav-color" class="nav-link active" aria-current="page" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-color" class="nav-link active" aria-current="page" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-color" class="nav-link active" aria-current="page" href="#">Domaines d'intervention</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a id="nav-color" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+            </a>
+            <ul  style="background-color: #0211a1;" class="dropdown-menu">
+              
+              <li><a class="dropdown-item" href="#">Services Entreprises </a></li>
+            
+              <li><a class="dropdown-item" href="#">Rédaction </a></li>
+            
+              <li><a class="dropdown-item" href="#">Assistance </a></li>
+            
+              <li><a class="dropdown-item" href="#">Gestion Immobilière </a></li>
+            
+              <li><a class="dropdown-item" href="#">Rédaction Juridique </a></li>
+            
+              <li><a class="dropdown-item" href="#">Rédaction Extra-Juridique </a></li>
+            
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a id="nav-color" class="nav-link active" aria-current="page" href="#">Equipe</a>
+          </li>
+          <li class="nav-item">
+            <a id="nav-color" class="nav-link active" aria-current="page" href="#">Qui sommes-nous ?</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        
+         
+        <div class="carousel-item  active   ">
+            <img src="/media/images/slf_2.jpg" class="d-block w-100" alt="Création des Entreprises">
+            <div class="carousel-caption">
+                <h4>Créer et légaliser vos activités en peu de temps ; Obtenez les documents légaux, nécessaires à un prix officiel.</h4>
+                <h5>Désormais, vous serez un entrepreneur crédible ayant une personnalité juridique.</h5>
+                <a href="#" class="btn btn-warning">CONTACTEZ-NOUS !</a>
+            </div>
+        </div>
+         
+        <div class="carousel-item   ">
+            <img src="/media/images/slf_immo_CnWU8Z8.jpg" class="d-block w-100" alt="Secteur Immobilier">
+            <div class="carousel-caption">
+                <h4>L&#x27;Immobilier est un secteur important de l&#x27;investissement en RDC, ayant une rentabilité conséquente.</h4>
+                <h5>Désormais. Contractez vos transactions immobilières par rédaction officielle et sécurisée</h5>
+                <a href="#" class="btn btn-warning">CONTACTEZ-NOUS !</a>
+            </div>
+        </div>
+         
+        <div class="carousel-item   ">
+            <img src="/media/images/slf_cread_Lz82Dqg.jpg" class="d-block w-100" alt="Secteur Redactionnel">
+            <div class="carousel-caption">
+                <h4>La communication par écrit reste le moyen le plus efficace d’attraction, de conviction et de preuve dans la société.</h4>
+                <h5>Désormais. Présentez-vous par écrit de manière professionnelle et attrayante.</h5>
+                <a href="#" class="btn btn-warning">CONTACTEZ-NOUS !</a>
+            </div>
+        </div>
+        
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- section card smart law firm -->
+
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class=" col-md-6">
+      <img style="height: 100%;" src="images/SLF.jpg"  class="img-fluid rounded-start" alt="card-image">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body">
+        <h4 class="card-title">CABINET JURIDIQUE </h4>
+        <h5 class="card-title2">DE CONSULTATION, CONSEIL ET ASSISTANCE JURIDIQUE</h5>
+        <hr>
+        <h6>SMART LAW FIRM est un cabinet Juridique de Consultation, de Conseil et d'Assistance situé en République Démocratique du Congo, dans la Ville/Province de Kinshasa.<br><br>Nous nous engageons à vous offrir des solutions juridiques viables et efficaces, vous fournir des informations véridictes et vous en accompagner dans votre quete des documents juridiques crédibles. <br><br>Notre équipe d'avocats expérimentés est là pour vous guider étape par étapes suivant vos attentes en mettant à votre disposition des services personnalisé.</h6>
+        <a href="#" class=" btn btn-warning text-center">EN SAVOIR PLUS</a>
+        <hr>
+        <h5 class="card-title text-center">SUIVEZ NOUS SUR CES PLATEFORMES</h5>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.tiktok.com/@yourusername" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <hr>
+        <h5 class="card-title text-center p-2">CONTACTEZ-NOUS DIRECTEMENT SUR</h5>
+        <div class="social-icons-tel">
+          <a href="tel:+1234567890"><i class="fas fa-phone"></i> +243 81 059 53 52</a>
+        </div>
+        <div class="social-icons-wa">
+          <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> +243 85 624 81 81</a>
+        </div>
+        <div class="social-icons-mail">
+          <a href="mailto:example@example.com"><i class="fas fa-envelope"></i> smartlawfirm1@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end section card smart law firm -->
+
+<!-- section services card slf -->
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="section-header">
+          <h2 class="text-center">NOS SERVICES</h2>
+          <hr>
+        </div>
+      </div>
+    </div>
+      <div class="container">
+        <div class="row d-flex align-items-stretch">
+          
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4>Services Entreprises</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                
+                  <li class="list-group-item">Acquisitions, Cessions d&#x27;entreprises, d&#x27;actifs et de Coentreprises</li>
+                    
+                  <li class="list-group-item">Légalisation des documents (actes notarié, statuts notariés, accusé de réception F-92)</li>
+                    
+                  <li class="list-group-item">Marchés des Capitaux et les Valeurs mobilières.</li>
+                    
+                  <li class="list-group-item">Modification de statuts</li>
+                    
+                  <li class="list-group-item">Ouverture d&#x27;un compte bancaire</li>
+                    
+                  <li class="list-group-item">Procédure d&#x27;obtention : RCCM, ID.NAT, NUMERO IMPOTS, CNSS, ONEM, INPP, ATTESTATION SOUS-TRAITANCE ARSP.</li>
+                    
+                  <li class="list-group-item">Rédaction de statuts</li>
+                    
+              </ul>
+              <div class="card-footer">
+                <h6 class="text-black">Création des Entreprises</h6>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4>Rédaction</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                
+                  <li class="list-group-item">Actes transactionnels</li>
+                    
+                  <li class="list-group-item">Contrats de baux</li>
+                    
+              </ul>
+              <div class="card-footer">
+                <h6 class="text-black">Secteur Immobilier</h6>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4>Assistance</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                
+                  <li class="list-group-item">Accompagnements transactionnels</li>
+                    
+                  <li class="list-group-item">Conseil à l&#x27;achateur (sécuristé)</li>
+                    
+                  <li class="list-group-item">Conseil au vendeur (risque)</li>
+                    
+              </ul>
+              <div class="card-footer">
+                <h6 class="text-black">Secteur Immobilier</h6>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4>Gestion Immobilière</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                
+                  <li class="list-group-item">Gestion de location</li>
+                    
+                  <li class="list-group-item">Gestion de sous location</li>
+                    
+              </ul>
+              <div class="card-footer">
+                <h6 class="text-black">Secteur Immobilier</h6>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4>Rédaction Juridique</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                
+                  <li class="list-group-item">Actes transactionnels</li>
+                    
+                  <li class="list-group-item">Clauses particulieres</li>
+                    
+                  <li class="list-group-item">Contrats Commerciaux</li>
+                    
+                  <li class="list-group-item">Contrats de Prestations</li>
+                    
+                  <li class="list-group-item">Contrats de Travail</li>
+                    
+                  <li class="list-group-item">Contrats Industriels</li>
+                    
+                  <li class="list-group-item">Contrats Personnels</li>
+                    
+                  <li class="list-group-item">Procès-Verbaux</li>
+                    
+                  <li class="list-group-item">Protocoles d&#x27;accords</li>
+                    
+                  <li class="list-group-item">Réglements d&#x27;Ordre Intérieurs</li>
+                    
+              </ul>
+              <div class="card-footer">
+                <h6 class="text-black">Secteur Redactionnel</h6>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h4>Rédaction Extra-Juridique</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                
+                  <li class="list-group-item">Articles</li>
+                    
+                  <li class="list-group-item">Biographies</li>
+                    
+                  <li class="list-group-item">Business Plan</li>
+                    
+                  <li class="list-group-item">CV Proffesionnels</li>
+                    
+                  <li class="list-group-item">Comptes Rendus</li>
+                    
+                  <li class="list-group-item">Courriers d&#x27;Entreprise</li>
+                    
+                  <li class="list-group-item">Discours</li>
+                    
+                  <li class="list-group-item">Ecrits Professionnels</li>
+                    
+                  <li class="list-group-item">Editos</li>
+                    
+                  <li class="list-group-item">Lettre de Motivation</li>
+                    
+                  <li class="list-group-item">Livres</li>
+                    
+                  <li class="list-group-item">Notes du Training</li>
+                    
+                  <li class="list-group-item">Profils d&#x27;Entreprise</li>
+                    
+                  <li class="list-group-item">Projets</li>
+                    
+                  <li class="list-group-item">Rapports</li>
+                    
+                  <li class="list-group-item">Romans</li>
+                    
+                  <li class="list-group-item">Synthèses</li>
+                    
+                  <li class="list-group-item">Testaments</li>
+                    
+                  <li class="list-group-item">Travaux Scientifiques</li>
+                    
+              </ul>
+              <div class="card-footer">
+                <h6 class="text-black">Secteur Redactionnel</h6>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+  <!-- end section services card slf -->
+  
+    <div class="container">
+      <div class="card">
+        <h5 class="card-header text-center">AVIS A NOS VISITEURS</h5>
+        <div class="card-body">
+          <p>
+            En raison de travaux d’élaboration et de développement de nos plateformes sur les supports 
+            numériques, notre site web est strictement à usage d’information. Toute sollicitation
+            de nos services vous conduira sur de plateformes spécifiques à la demande, 
+            une consultation en présentielle entre également dans le cadre de cette perspective. <br>
+            
+            Notre équipe d'ingénieurs travail d'arrache pieds pour rendre le site fonctionnelle dans un bref delai.<br>
+            Merci pour votre comprehension !
+
+            Soumettez vos reqûetes en utilisant les contacts repris dans la rubrique : Qui sommes-nous ? <br>
+            Mais nous priviligions plus WhatsApp (+243 85 624 81 81) pour de raison de faisabilité ! 
+
+          </p>
+      </div>
+    </div>
+  </div>
+    
+  <!-- end section services card slf -->
+
+<!-- footer section -->
+<footer>
+    
+<hr>
+<div class="row">
+    <div class="image-center col-lg-4">
+        <h5>CABINET JURIDIQUE DE CONSULTATION, CONSEIL ET ASSISTANCE JURIDIQUE</h5>
+        <img src="images/smart_low_firm_logo.png" alt="">
+        <h5>BRANCHES D'INTERVENTION</h5>
+        <hr>
+        
+        <h6 class="text-center text-white"> Services Entreprises </h6>
+        <hr>
+        
+        <h6 class="text-center text-white"> Rédaction </h6>
+        <hr>
+        
+        <h6 class="text-center text-white"> Assistance </h6>
+        <hr>
+        
+        <h6 class="text-center text-white"> Gestion Immobilière </h6>
+        <hr>
+        
+        <h6 class="text-center text-white"> Rédaction Juridique </h6>
+        <hr>
+        
+        <h6 class="text-center text-white"> Rédaction Extra-Juridique </h6>
+        <hr>
+        
+    </div>
+    <div class="col-lg-4">
+        <h5>NOS ADRESSES</h5>
+        <hr>
+        <h6 class="text-white">145-C, Avenue Usoke (Croisement Huilerie), Quartier Ngbaka, Commune de Kinshasa, Ville Province de Kinshasa République Démocratique du Congo (RDC)</h6>
+        <hr>
+        <h5>NOS CONTACTS</h5>
+        <hr>
+        <h6 class="text-white text-center">Tel : + (243) 85 624 81 81 <br> Tel : + (243) 82 059 53 52</h6>
+        <hr>
+        <h6 class="text-white text-center">smartlawfirm1@gmail.com</h6>
+        <h6 class="text-white text-center">Version. S-L-F-0.1</h6>
+        <hr>
+    </div>
+    <div class="col-lg-4">
+        <h5>A PROPOS DE SANGA NI NGASA</h5>
+        <hr>
+        <p class="text-white">Sanga-ni-ngasa est une boite régroupant des ingénieurs en informatiques, télécommunications et de programmeurs freelances avec des connaissances et des compétences dans le domaine de nouvelles technologies et de  l'information (Informatique) et de communications (Télécommunications). Nous mettons  nos services à la disposition de vos institutions pour faciliter votre intégration dans le monde numérique</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:example@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <hr>
+        <h6 class="text-white text-center">Tel : + (243) 85 009 65 25 <br> Tel : + (243) 82 748 35 38 [WhatsApp]</h6>
+        <h6 class="text-white text-center">tegratshibanda20@gmail.com</h6>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <p class="text-center texte text-white">Developpé par @sanga-ni-ngasa, Tout droits réservés !</p>
+</div>
+
+</footer>
+  <!--  end footer section -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="/static/css/bootstrap.min.js" ></script>
+</body>
+</html>
